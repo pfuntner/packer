@@ -15,6 +15,6 @@
     "title": "Google Cloud Platform",
     "path": "googlecompute",
     "repo": "hashicorp/packer-plugin-googlecompute",
-    "version": "latest"
+    "version": "v0.0.1-pre"
   }
 ]
