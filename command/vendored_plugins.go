@@ -20,6 +20,7 @@ import (
 	dockerpushpostprocessor "github.com/hashicorp/packer-plugin-docker/post-processor/docker-push"
 	dockersavepostprocessor "github.com/hashicorp/packer-plugin-docker/post-processor/docker-save"
 	dockertagpostprocessor "github.com/hashicorp/packer-plugin-docker/post-processor/docker-tag"
+	googlecomputebuilder "github.com/hashicorp/packer-plugin-googlecompute/builder/googlecompute"
 )
 
 // VendoredDatasources are datasource components that were once bundled with the
@@ -38,6 +39,7 @@ var VendoredBuilders = map[string]packersdk.Builder{
 	"amazon-ebssurrogate": new(amazonebssurrogatebuilder.Builder),
 	"amazon-ebsvolume":    new(amazonebsvolumebuilder.Builder),
 	"amazon-instance":     new(amazoninstancebuilder.Builder),
+	"googlecompute":       new(googlecomputebuilder.Builder),
 }
 
 // VendoredProvisioners are provisioner components that were once bundled with the
@@ -47,12 +49,14 @@ var VendoredProvisioners = map[string]packersdk.Provisioner{}
 // VendoredPostProcessors are post-processor components that were once bundled with the
 // Packer core, but are now being imported from their counterpart plugin repos
 var VendoredPostProcessors = map[string]packersdk.PostProcessor{
-	"docker-import":   new(dockerimportpostprocessor.PostProcessor),
-	"docker-push":     new(dockerpushpostprocessor.PostProcessor),
-	"docker-save":     new(dockersavepostprocessor.PostProcessor),
-	"docker-tag":      new(dockertagpostprocessor.PostProcessor),
-	"exoscale-import": new(exoscaleimportpostprocessor.PostProcessor),
-	"amazon-import":   new(anazibimportpostprocessor.PostProcessor),
+	"amazon-import":        new(anazibimportpostprocessor.PostProcessor),
+	"docker-import":        new(dockerimportpostprocessor.PostProcessor),
+	"docker-push":          new(dockerpushpostprocessor.PostProcessor),
+	"docker-save":          new(dockersavepostprocessor.PostProcessor),
+	"docker-tag":           new(dockertagpostprocessor.PostProcessor),
+	"exoscale-import":      new(exoscaleimportpostprocessor.PostProcessor),
+	"googlecompute-export": new(googlecomputeexportpostprocessor.PostProcessor),
+	"googlecompute-import": new(googlecomputeimportpostprocessor.PostProcessor),
 }
 
 // Upon init lets load up any plugins that were vendored manually into the default

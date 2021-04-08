@@ -20,7 +20,6 @@ import (
 	cloudstackbuilder "github.com/hashicorp/packer/builder/cloudstack"
 	digitaloceanbuilder "github.com/hashicorp/packer/builder/digitalocean"
 	filebuilder "github.com/hashicorp/packer/builder/file"
-	googlecomputebuilder "github.com/hashicorp/packer/builder/googlecompute"
 	hcloudbuilder "github.com/hashicorp/packer/builder/hcloud"
 	hyperonebuilder "github.com/hashicorp/packer/builder/hyperone"
 	hypervisobuilder "github.com/hashicorp/packer/builder/hyperv/iso"
@@ -64,8 +63,6 @@ import (
 	checksumpostprocessor "github.com/hashicorp/packer/post-processor/checksum"
 	compresspostprocessor "github.com/hashicorp/packer/post-processor/compress"
 	digitaloceanimportpostprocessor "github.com/hashicorp/packer/post-processor/digitalocean-import"
-	googlecomputeexportpostprocessor "github.com/hashicorp/packer/post-processor/googlecompute-export"
-	googlecomputeimportpostprocessor "github.com/hashicorp/packer/post-processor/googlecompute-import"
 	manifestpostprocessor "github.com/hashicorp/packer/post-processor/manifest"
 	shelllocalpostprocessor "github.com/hashicorp/packer/post-processor/shell-local"
 	ucloudimportpostprocessor "github.com/hashicorp/packer/post-processor/ucloud-import"
@@ -107,7 +104,6 @@ var Builders = map[string]packersdk.Builder{
 	"cloudstack":       new(cloudstackbuilder.Builder),
 	"digitalocean":     new(digitaloceanbuilder.Builder),
 	"file":             new(filebuilder.Builder),
-	"googlecompute":    new(googlecomputebuilder.Builder),
 	"hcloud":           new(hcloudbuilder.Builder),
 	"hyperone":         new(hyperonebuilder.Builder),
 	"hyperv-iso":       new(hypervisobuilder.Builder),
@@ -175,8 +171,6 @@ var PostProcessors = map[string]packersdk.PostProcessor{
 	"checksum":             new(checksumpostprocessor.PostProcessor),
 	"compress":             new(compresspostprocessor.PostProcessor),
 	"digitalocean-import":  new(digitaloceanimportpostprocessor.PostProcessor),
-	"googlecompute-export": new(googlecomputeexportpostprocessor.PostProcessor),
-	"googlecompute-import": new(googlecomputeimportpostprocessor.PostProcessor),
 	"manifest":             new(manifestpostprocessor.PostProcessor),
 	"shell-local":          new(shelllocalpostprocessor.PostProcessor),
 	"ucloud-import":        new(ucloudimportpostprocessor.PostProcessor),
