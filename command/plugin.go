@@ -166,20 +166,20 @@ var Provisioners = map[string]packersdk.Provisioner{
 }
 
 var PostProcessors = map[string]packersdk.PostProcessor{
-	"alicloud-import":      new(alicloudimportpostprocessor.PostProcessor),
-	"artifice":             new(artificepostprocessor.PostProcessor),
-	"checksum":             new(checksumpostprocessor.PostProcessor),
-	"compress":             new(compresspostprocessor.PostProcessor),
-	"digitalocean-import":  new(digitaloceanimportpostprocessor.PostProcessor),
-	"manifest":             new(manifestpostprocessor.PostProcessor),
-	"shell-local":          new(shelllocalpostprocessor.PostProcessor),
-	"ucloud-import":        new(ucloudimportpostprocessor.PostProcessor),
-	"vagrant":              new(vagrantpostprocessor.PostProcessor),
-	"vagrant-cloud":        new(vagrantcloudpostprocessor.PostProcessor),
-	"vsphere":              new(vspherepostprocessor.PostProcessor),
-	"vsphere-template":     new(vspheretemplatepostprocessor.PostProcessor),
-	"yandex-export":        new(yandexexportpostprocessor.PostProcessor),
-	"yandex-import":        new(yandeximportpostprocessor.PostProcessor),
+	"alicloud-import":     new(alicloudimportpostprocessor.PostProcessor),
+	"artifice":            new(artificepostprocessor.PostProcessor),
+	"checksum":            new(checksumpostprocessor.PostProcessor),
+	"compress":            new(compresspostprocessor.PostProcessor),
+	"digitalocean-import": new(digitaloceanimportpostprocessor.PostProcessor),
+	"manifest":            new(manifestpostprocessor.PostProcessor),
+	"shell-local":         new(shelllocalpostprocessor.PostProcessor),
+	"ucloud-import":       new(ucloudimportpostprocessor.PostProcessor),
+	"vagrant":             new(vagrantpostprocessor.PostProcessor),
+	"vagrant-cloud":       new(vagrantcloudpostprocessor.PostProcessor),
+	"vsphere":             new(vspherepostprocessor.PostProcessor),
+	"vsphere-template":    new(vspheretemplatepostprocessor.PostProcessor),
+	"yandex-export":       new(yandexexportpostprocessor.PostProcessor),
+	"yandex-import":       new(yandeximportpostprocessor.PostProcessor),
 }
 
 var Datasources = map[string]packersdk.Datasource{}
