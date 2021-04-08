@@ -21,6 +21,8 @@ import (
 	dockersavepostprocessor "github.com/hashicorp/packer-plugin-docker/post-processor/docker-save"
 	dockertagpostprocessor "github.com/hashicorp/packer-plugin-docker/post-processor/docker-tag"
 	googlecomputebuilder "github.com/hashicorp/packer-plugin-googlecompute/builder/googlecompute"
+	googlecomputeexportpostprocessor "github.com/hashicorp/packer-plugin-googlecompute/post-processor/googlecompute-export"
+	googlecomputeimportpostprocessor "github.com/hashicorp/packer-plugin-googlecompute/post-processor/googlecompute-import"
 )
 
 // VendoredDatasources are datasource components that were once bundled with the
