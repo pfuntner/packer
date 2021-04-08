@@ -10,5 +10,11 @@
     "path": "amazon",
     "repo": "hashicorp/packer-plugin-amazon",
     "version": "latest"
+  },
+  {
+    "title": "Google Cloud Platform",
+    "path": "googlecompute",
+    "repo": "hashicorp/packer-plugin-googlecompute",
+    "version": "latest"
   }
 ]
